@@ -1,2 +1,3 @@
-- first start the mongodb server
+- first `npm install` to install the dependencies
+- then start the mongodb server
 - enter the project and type `node ./bin/www`

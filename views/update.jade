@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title 【更新】人事管理系统
+        link(rel='stylesheet', href='../stylesheets/update.css')
+        script(src='../javascripts/jquery.js')
+    body
+        h1 #{title}
+        a(href="/") 
+            h5 回到首页
+        form(method="post", action="/update")
+            input#inputId(type='hidden', name='id', value='#{teachers.id}')
+            span 姓名：
+            input#inputName(type='text', name='name', value='#{teachers.name}')
+            span 年龄：
+            input#inputAge(type='text', name='age', value='#{teachers.age}')
+            span 所在学院：
+            input#inputLoc(type='text', name='loc', value='#{teachers.loc}')
+            span 工作年份：
+            input#inputYear(type='text', name='year', value='#{teachers.year}')
+            span Q Q：
+            input#inputYear(type='text', name='qq', value='#{teachers.qq}')
+            span 手机号码：
+            input#inputYear(type='text', name='phone', value='#{teachers.phone}')
+            span 邮箱：
+            input#inputYear(type='text', name='email', value='#{teachers.email}')
+            span 联系地址：
+            input#inputYear(type='text', name='address', value='#{teachers.address}')
+            input#update(type='submit', value='确认无误 提交信息')

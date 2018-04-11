@@ -8,7 +8,7 @@ var _ = require('underscore');
 var mongoose = require('mongoose');
 var teacher = require('./models/teacherModel');
 
-mongoose.connect('mongodb://localhost/people');
+mongoose.connect('mongodb://localhost/people',{useMongoClient: true});
 
 var routes = require('./routes/index');
 var users = require('./routes/users');

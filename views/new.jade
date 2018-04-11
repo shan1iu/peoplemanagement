@@ -1,72 +1,72 @@
 doctype html
 html(lang='en')
-    head
-        meta(charset='UTF-8')
-        title 【增加】人事管理系统
-        link(rel='stylesheet', href='stylesheets/global.css')
-        link(rel='stylesheet', href='stylesheets/nav.css')
-        link(rel='stylesheet', href='stylesheets/content.css')
-        link(rel='stylesheet', href='stylesheets/new.css')
-        script(src='javascripts/jquery.js')
-    body
-    #nav
-        .inner
-            ul
-                li
-                    a(href='/') HOMEPAGE
-                li
-                    a(href='new') NEW
-                li
-                    a(href='search') SEARCH
-    #content.loadEmotion
-        form(method="post", action="/new")
-            .left
-                ul
-                    li
-                        input#inputName(type='text', placeholder='姓名', name='name')
-                    li
-                        input#inputAge(type='text', placeholder='年龄(输入纯数字即可)', name='age')
-                    li
-                        input#inputLoc(type='text', placeholder='所在学院', name='loc')
-                    li
-                        input#inputYear(type='text', placeholder='开始工作年份(输入纯数字即可)', name='year')
-                    li
-                        | 性别&nbsp;:
-                        input#sex_male(type='radio', name='sex', value='true')
-                        label(for='sex_male') 男
-                        input#sex_female(type='radio', name='sex', value='false')
-                        label(for='sex_female') 女
-                    li
-                        | 婚姻情况&nbsp;:
-                        input#marriage_yes(type='radio', name='marriage', value='true')
-                        label(for='marriage_yes') 已婚
-                        input#marriage_no(type='radio', name='marriage', value='false')
-                        label(for='marriage_no') 未婚
-                    li
-                        | 职称&nbsp;:
-                        select#inputPro(name='pro')
-                            option(value='助教') 助教
-                            option(value='讲师') 讲师
-                            option(value='副教授') 副教授
-                            option(value='教授') 教授
-                    li
-                        | 学历&nbsp;:
-                        select#inputEdu(name='edu')
-                            option(value='本科') 本科
-                            option(value='研究生') 研究生
-                            option(value='博士') 博士
-                            option(value='博士生导师') 博士生导师
-            .line
-            .right
-                ul
-                    li
-                        input#inputQq(type='text', placeholder='QQ', name='qq')
-                    li
-                        input#inputPhone(type='text', placeholder='手机号码', name='phone')
-                    li
-                        input#inputEmail(type='text', placeholder='邮箱', name='email')
-                    li
-                        textarea#address_id(cols='45', rows='5', placeholder='联系地址', name='address')
-            .button
-                input#confirm(type='submit', value='确认无误 提交信息')
-    #footer
+  head
+    meta(charset='UTF-8')
+    title 【增加】人事管理系统
+    link(rel='stylesheet', href='stylesheets/global.css')
+    link(rel='stylesheet', href='stylesheets/nav.css')
+    link(rel='stylesheet', href='stylesheets/content.css')
+    link(rel='stylesheet', href='stylesheets/new.css')
+    script(src='javascripts/jquery.js')
+  body
+  #nav
+    .inner
+      ul
+        li
+          a(href='/') HOMEPAGE
+        li
+          a(href='new') NEW
+        li
+          a(href='search') SEARCH
+  #content.loadEmotion
+    form(method="post", action="/new")
+      .left
+        ul
+          li
+            input#inputName(type='text', placeholder='Name', name='name')
+          li
+            input#inputAge(type='text', placeholder='Age(Integer)', name='age')
+          li
+            input#inputLoc(type='text', placeholder='College', name='loc')
+          li
+            input#inputYear(type='text', placeholder='Year of start working', name='year')
+          li
+            | Gender&nbsp;:
+            input#sex_male(type='radio', name='sex', value='true')
+            label(for='sex_male') Male
+            input#sex_female(type='radio', name='sex', value='false')
+            label(for='sex_female') Female
+          li
+            | Marriage&nbsp;:
+            input#marriage_yes(type='radio', name='marriage', value='true')
+            label(for='marriage_yes') Married
+            input#marriage_no(type='radio', name='marriage', value='false')
+            label(for='marriage_no') Not Married
+          li
+            | Title&nbsp;:
+            select#inputPro(name='pro')
+              option(value='ta') TA
+              option(value='lecturer') lecturer
+              option(value='apro') Associate Professor
+              option(value='pro') Professor
+          li
+            | Education background&nbsp;:
+            select#inputEdu(name='edu')
+              option(value='undergraduate') undergraduate
+              option(value='master') master
+              option(value='PHD') PHD
+              option(value='doctoralSupervisor') Doctoral Supervisor
+      .line
+      .right
+        ul
+          li
+            input#inputQq(type='text', placeholder='QQ', name='qq')
+          li
+            input#inputPhone(type='text', placeholder='Phone', name='phone')
+          li
+            input#inputEmail(type='text', placeholder='Email', name='email')
+          li
+            textarea#address_id(cols='45', rows='5', placeholder='Address', name='address')
+      .button
+        input#confirm(type='submit', value='Comfirm')
+  #footer

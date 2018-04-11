@@ -1,82 +1,82 @@
 doctype html
 html(lang='en')
-    head
-        meta(charset='UTF-8')
-        title 人事管理系统
-        link(rel='stylesheet', href='stylesheets/global.css')
-        link(rel='stylesheet', href='stylesheets/nav.css')
-        link(rel='stylesheet', href='stylesheets/content.css')
-        script(src='javascripts/jquery.js')
-    body
-        #nav
-            .inner
-                ul
-                    li
-                        a(href='/') HOMEPAGE
-                    li
-                        a(href='new') NEW
-                    li
-                        a(href='search') SEARCH
-        #content
-            each item in teachers
-                .item.loadEmotion
-                    // 照片
-                    .photo
-                        img(src='images/logo.png', alt='logo')
-                    // 基本信息
-                    .middle
-                        .up
-                            .name.info
-                                span.attr 姓名 : 
-                                | #{item.name}
-                            .sex.info
-                                span.attr 性别 : 
-                                if (item.sex) == true
-                                    strong
-                                        | 男
-                                else
-                                    strong
-                                        | 女
-                            .age.info
-                                span.attr 年龄 : 
-                                | #{item.age}
-                            .pro.info
-                                span.attr 职称 : 
-                                | #{item.pro}
-                            .edu.info
-                                span.attr 学历 : 
-                                | #{item.edu}
-                            .loc.info
-                                span.attr 所在学院 : 
-                                | #{item.loc}
-                            .year.info
-                                span.attr 工作年份 : 
-                                | #{item.year} 年
-                            .marry.info
-                                span.attr 婚姻情况 : 
-                                if (item.marriage) == true
-                                    strong
-                                        | 已婚
-                                else
-                                    strong
-                                        | 未婚
-                        .line
-                        .down
-                            .qq.info
-                                span.attr QQ : 
-                                | #{item.qq}
-                            .phone.info
-                                span.attr 手机 : 
-                                | #{item.phone}
-                            .email.info
-                                span.attr 邮箱 : 
-                                | #{item.email}
-                            .address.info
-                                span.attr 联系地址 : 
-                                | #{item.address}
-                            // 删除修改操作
-                    .button
-                        input.delete(type='button', value='删除', name='#{item._id}')
-                        a.edit(href="../update/#{item._id}") 修改
-        #footer
-        script(src='javascripts/indexb.js')
+  head
+    meta(charset='UTF-8')
+    title Personnel Management System
+    link(rel='stylesheet', href='stylesheets/global.css')
+    link(rel='stylesheet', href='stylesheets/nav.css')
+    link(rel='stylesheet', href='stylesheets/content.css')
+    script(src='javascripts/jquery.js')
+  body
+    #nav
+      .inner
+        ul
+          li
+            a(href='/') HOMEPAGE
+          li
+            a(href='new') NEW
+          li
+            a(href='search') SEARCH
+    #content
+      each item in teachers
+        .item.loadEmotion
+          // 照片
+          .photo
+            img(src='images/logo.png', alt='logo')
+          // 基本信息
+          .middle
+            .up
+              .name.info
+                span.attr Name : 
+                | #{item.name}
+              .sex.info
+                span.attr Sex : 
+                if (item.sex) == true
+                  strong
+                    | Male
+                else
+                  strong
+                    | FeMale
+              .age.info
+                span.attr Age : 
+                | #{item.age}
+              .pro.info
+                span.attr Title : 
+                | #{item.pro}
+              .edu.info
+                span.attr Education : 
+                | #{item.edu}
+              .loc.info
+                span.attr College : 
+                | #{item.loc}
+              .year.info
+                span.attr Working Year : 
+                | #{item.year} 年
+              .marry.info
+                span.attr Marriage : 
+                if (item.marriage) == true
+                  strong
+                    | Married
+                else
+                  strong
+                    | Single
+            .line
+            .down
+              .qq.info
+                span.attr QQ : 
+                | #{item.qq}
+              .phone.info
+                span.attr Phone : 
+                | #{item.phone}
+              .email.info
+                span.attr Email : 
+                | #{item.email}
+              .address.info
+                span.attr Address : 
+                | #{item.address}
+              // 删除修改操作
+          .button
+            input.delete(type='button', value='Delete', name='#{item._id}')
+            a.edit(href="../update/#{item._id}") Edit
+    #footer
+    script(src='javascripts/indexb.js')

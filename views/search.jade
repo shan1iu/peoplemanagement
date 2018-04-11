@@ -1,60 +1,60 @@
 doctype html
 html(lang='en')
-    head
-        meta(charset='UTF-8')
-        title 【搜索】人事管理系统
-        link(rel='stylesheet', href='stylesheets/global.css')
-        link(rel='stylesheet', href='stylesheets/nav.css')
-        link(rel='stylesheet', href='stylesheets/content.css')
-        link(rel='stylesheet', href='stylesheets/search.css')
-        script(src='javascripts/jquery.js')
-    body
-    #nav
-        .inner
-            ul
-                li
-                    a(href='/') HOMEPAGE
-                li
-                    a(href='new') NEW
-                li
-                    a(href='search') SEARCH
-    #content.loadEmotion
-        .searchItem
-            p 条件查询
-        .searchItem
-            | 姓名 : 
-            input#name_search(type='text', placeholder='请输入姓名(支持模糊搜索, 可提供姓氏)')
-        .searchItem
-            | 性别 : 
-            input#sex_male(type='radio', name='sex', value='男')
-            label(for='sex_male') 男
-            input#sex_female(type='radio', name='sex', value='女')
-            label(for='sex_female') 女
-        .searchItem
-            | 婚姻情况 : 
-            input#marriage_yes(type='radio', name='marriage', value='yes')
-            label(for='marriage_yes') 已婚
-            input#marriage_no(type='radio', name='marriage', value='no')
-            label(for='marriage_no') 未婚
-        .searchItem
-            | 职称 : 
-            select#propro
-                option(value='')
-                option(value='jiangshi') 讲师
-                option(value='zhujiao') 助教
-                option(value='fujiaoshou') 副教授
-                option(value='jiaoshou') 教授
-        .searchItem
-            | 学历 : 
-            select#eduedu
-                option(value='')
-                option(value='benke') 本科
-                option(value='yanjiusheng') 研究生
-                option(value='boshi') 博士
-                option(value='boshishengdaoshi') 博士生导师
-        .searchItem
-            input#search(type='button', value='查询')
-        .result
-    #footer
-    script(src='javascripts/searchb.js')
+  head
+    meta(charset='UTF-8')
+    title Search
+    link(rel='stylesheet', href='stylesheets/global.css')
+    link(rel='stylesheet', href='stylesheets/nav.css')
+    link(rel='stylesheet', href='stylesheets/content.css')
+    link(rel='stylesheet', href='stylesheets/search.css')
+    script(src='javascripts/jquery.js')
+  body
+  #nav
+    .inner
+      ul
+        li
+          a(href='/') HOMEPAGE
+        li
+          a(href='new') NEW
+        li
+          a(href='search') SEARCH
+  #content.loadEmotion
+    .searchItem
+      p Search by Condition
+    .searchItem
+      | Name : 
+      input#name_search(type='text', placeholder='Please input Name(Advanced search provided)')
+    .searchItem
+      | Gender : 
+      input#sex_male(type='radio', name='sex', value='Male')
+      label(for='sex_male') Male
+      input#sex_female(type='radio', name='sex', value='Female')
+      label(for='sex_female') Female
+    .searchItem
+      | Marriage : 
+      input#marriage_yes(type='radio', name='marriage', value='yes')
+      label(for='marriage_yes') Married
+      input#marriage_no(type='radio', name='marriage', value='no')
+      label(for='marriage_no') Not Married
+    .searchItem
+      | Title : 
+      select#propro
+        option(value='')
+        option(value='jiangshi') lecturer
+        option(value='zhujiao') TA
+        option(value='fujiaoshou') Associate Professor
+        option(value='jiaoshou') Professor
+    .searchItem
+      | 学历 : 
+      select#eduedu
+        option(value='')
+        option(value='benke') undergraduate
+        option(value='yanjiusheng') Master
+        option(value='boshi') PHD
+        option(value='boshishengdaoshi') Doctoral Supervisor
+    .searchItem
+      input#search(type='button', value='Search')
+    .result
+  #footer
+  script(src='javascripts/searchb.js')
 
